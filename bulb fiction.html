@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fun with Bulb</title>
+    </head>
+    <body>
+        <h1>Click the switch button to turn the bulb on and off</h1>
+        <img src="bulboff.jpg" onclick="onoff()" width="300px" height="445px"/>
+        <script type="text/javascript">
+            function onoff() {
+                var source = document.getElementsByTagName("img")[0].src;
+                console.log(source);
+                if(source.match('on')){
+                    document.getElementsByTagName("img")[0].src="bulboff.jpg"
+                }
+                else {
+                    document.getElementsByTagName("img")[0].src="bulbon.jpg"
+                }
+            }
+        </script>
+    </body>
+</html>
